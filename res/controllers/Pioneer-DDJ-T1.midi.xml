@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MixxxControllerPreset schemaVersion="1" mixxxVersion="2.5">
+    <info>
+        <name>Pioneer DDJ-T1</name>
+        <author>Michiel W. Beijen</author>
+        <description>Core MIDI mapping for the Pioneer DDJ-T1 (originally bundled with Traktor LE). Covers transport, 4-channel mixer (volume/EQ/filter/trim), crossfader, pitch faders, jog wheels (scratch + pitch bend), headphone cue, browse and load.</description>
+    </info>
+    <controller id="DDJ-T1">
+        <scriptfiles>
+            <file functionprefix="PioneerDDJT1" filename="Pioneer-DDJ-T1-scripts.js"/>
+        </scriptfiles>
+        <controls>
+
+            <!-- ============================================================ -->
+            <!-- Library / Browse                                              -->
+            <!-- ============================================================ -->
+            <control>
+                <description>BROWSE knob - rotate - scroll library</description>
+                <group>[Library]</group>
+                <key>MoveVertical</key>
+                <status>0xB6</status>
+                <midino>0x40</midino>
+                <options>
+                    <SelectKnob/>
+                </options>
+            </control>
+            <control>
+                <description>BROWSE knob - push - toggle focus between tree and tracklist</description>
+                <group>[Library]</group>
+                <key>MoveFocusForward</key>
+                <status>0x96</status>
+                <midino>0x41</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>LOAD - load selected track into Deck 1 (A)</description>
+                <group>[Channel1]</group>
+                <key>LoadSelectedTrack</key>
+                <status>0x96</status>
+                <midino>0x46</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>LOAD - load selected track into Deck 2 (B)</description>
+                <group>[Channel2]</group>
+                <key>LoadSelectedTrack</key>
+                <status>0x96</status>
+                <midino>0x47</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- Transport - Deck A (Channel1)                                 -->
+            <!-- ============================================================ -->
+            <control>
+                <description>PLAY/PAUSE - Deck A</description>
+                <group>[Channel1]</group>
+                <key>play</key>
+                <status>0x90</status>
+                <midino>0x0B</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>CUE - Deck A</description>
+                <group>[Channel1]</group>
+                <key>cue_default</key>
+                <status>0x90</status>
+                <midino>0x0C</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>SHIFT - Deck A</description>
+                <group>[Channel1]</group>
+                <key>PioneerDDJT1.shift</key>
+                <status>0x90</status>
+                <midino>0x1A</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>
+                <description>KEY LOCK - Deck A</description>
+                <group>[Channel1]</group>
+                <key>keylock</key>
+                <status>0x90</status>
+                <midino>0x56</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- Transport - Deck B (Channel2)                                 -->
+            <!-- ============================================================ -->
+            <control>
+                <description>PLAY/PAUSE - Deck B</description>
+                <group>[Channel2]</group>
+                <key>play</key>
+                <status>0x91</status>
+                <midino>0x0B</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>CUE - Deck B</description>
+                <group>[Channel2]</group>
+                <key>cue_default</key>
+                <status>0x91</status>
+                <midino>0x0C</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>SHIFT - Deck B</description>
+                <group>[Channel2]</group>
+                <key>PioneerDDJT1.shift</key>
+                <status>0x91</status>
+                <midino>0x1A</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>
+                <description>KEY LOCK - Deck B</description>
+                <group>[Channel2]</group>
+                <key>keylock</key>
+                <status>0x91</status>
+                <midino>0x56</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- Pitch faders                                                  -->
+            <!-- ============================================================ -->
+            <control>
+                <description>Pitch fader - Deck A (MSB only, 7-bit)</description>
+                <group>[Channel1]</group>
+                <key>rate</key>
+                <status>0xB0</status>
+                <midino>0x00</midino>
+                <options>
+                    <Invert/>
+                </options>
+            </control>
+            <control>
+                <description>Pitch fader - Deck B (MSB only, 7-bit)</description>
+                <group>[Channel2]</group>
+                <key>rate</key>
+                <status>0xB1</status>
+                <midino>0x00</midino>
+                <options>
+                    <Invert/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- Jog wheels (script-handled for scratch + pitch bend)          -->
+            <!-- ============================================================ -->
+            <control>
+                <description>Jog wheel touch (top platter) - Deck A</description>
+                <group>[Channel1]</group>
+                <key>PioneerDDJT1.jogTouch</key>
+                <status>0x90</status>
+                <midino>0x36</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>
+                <description>Jog wheel touch (top platter) - Deck B</description>
+                <group>[Channel2]</group>
+                <key>PioneerDDJT1.jogTouch</key>
+                <status>0x91</status>
+                <midino>0x36</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>
+                <description>Jog wheel rotation (top, scratch) - Deck A</description>
+                <group>[Channel1]</group>
+                <key>PioneerDDJT1.jogTop</key>
+                <status>0xB0</status>
+                <midino>0x22</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>
+                <description>Jog wheel rotation (top, scratch) - Deck B</description>
+                <group>[Channel2]</group>
+                <key>PioneerDDJT1.jogTop</key>
+                <status>0xB1</status>
+                <midino>0x22</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>
+                <description>Jog wheel rotation (side, pitch bend) - Deck A</description>
+                <group>[Channel1]</group>
+                <key>PioneerDDJT1.jogSide</key>
+                <status>0xB0</status>
+                <midino>0x21</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>
+                <description>Jog wheel rotation (side, pitch bend) - Deck B</description>
+                <group>[Channel2]</group>
+                <key>PioneerDDJT1.jogSide</key>
+                <status>0xB1</status>
+                <midino>0x21</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- Filter (QuickEffect) - per deck                                -->
+            <!-- ============================================================ -->
+            <control>
+                <description>Filter knob - Deck A</description>
+                <group>[QuickEffectRack1_[Channel1]]</group>
+                <key>super1</key>
+                <status>0xB0</status>
+                <midino>0x04</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Filter knob - Deck B</description>
+                <group>[QuickEffectRack1_[Channel2]]</group>
+                <key>super1</key>
+                <status>0xB1</status>
+                <midino>0x04</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Filter knob push - toggle filter enabled - Deck A</description>
+                <group>[QuickEffectRack1_[Channel1]]</group>
+                <key>enabled</key>
+                <status>0x90</status>
+                <midino>0x45</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Filter knob push - toggle filter enabled - Deck B</description>
+                <group>[QuickEffectRack1_[Channel2]]</group>
+                <key>enabled</key>
+                <status>0x91</status>
+                <midino>0x45</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- Crossfader                                                    -->
+            <!-- ============================================================ -->
+            <control>
+                <description>Crossfader</description>
+                <group>[Master]</group>
+                <key>crossfader</key>
+                <status>0xB6</status>
+                <midino>0x1F</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- Channel volume faders (logical decks A,B,C,D)                 -->
+            <!-- ============================================================ -->
+            <control>
+                <description>Volume fader - Deck A (Mixxx Channel1)</description>
+                <group>[Channel1]</group>
+                <key>volume</key>
+                <status>0xB6</status>
+                <midino>0x13</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Volume fader - Deck B (Mixxx Channel2)</description>
+                <group>[Channel2]</group>
+                <key>volume</key>
+                <status>0xB6</status>
+                <midino>0x15</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Volume fader - Deck C (Mixxx Channel3)</description>
+                <group>[Channel3]</group>
+                <key>volume</key>
+                <status>0xB6</status>
+                <midino>0x17</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Volume fader - Deck D (Mixxx Channel4)</description>
+                <group>[Channel4]</group>
+                <key>volume</key>
+                <status>0xB6</status>
+                <midino>0x19</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- TRIM / gain                                                   -->
+            <!-- ============================================================ -->
+            <control>
+                <description>TRIM - Deck A</description>
+                <group>[Channel1]</group>
+                <key>pregain</key>
+                <status>0xB6</status>
+                <midino>0x03</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>TRIM - Deck B</description>
+                <group>[Channel2]</group>
+                <key>pregain</key>
+                <status>0xB6</status>
+                <midino>0x04</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>TRIM - Deck C</description>
+                <group>[Channel3]</group>
+                <key>pregain</key>
+                <status>0xB6</status>
+                <midino>0x05</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>TRIM - Deck D</description>
+                <group>[Channel4]</group>
+                <key>pregain</key>
+                <status>0xB6</status>
+                <midino>0x06</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- EQ HI                                                         -->
+            <!-- ============================================================ -->
+            <control>
+                <description>EQ HI - Deck A</description>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter3</key>
+                <status>0xB6</status>
+                <midino>0x07</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>EQ HI - Deck B</description>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter3</key>
+                <status>0xB6</status>
+                <midino>0x08</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>EQ HI - Deck C</description>
+                <group>[EqualizerRack1_[Channel3]_Effect1]</group>
+                <key>parameter3</key>
+                <status>0xB6</status>
+                <midino>0x09</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>EQ HI - Deck D</description>
+                <group>[EqualizerRack1_[Channel4]_Effect1]</group>
+                <key>parameter3</key>
+                <status>0xB6</status>
+                <midino>0x0A</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- EQ MID                                                        -->
+            <!-- ============================================================ -->
+            <control>
+                <description>EQ MID - Deck A</description>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter2</key>
+                <status>0xB6</status>
+                <midino>0x0B</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>EQ MID - Deck B</description>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter2</key>
+                <status>0xB6</status>
+                <midino>0x0C</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>EQ MID - Deck C</description>
+                <group>[EqualizerRack1_[Channel3]_Effect1]</group>
+                <key>parameter2</key>
+                <status>0xB6</status>
+                <midino>0x0D</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>EQ MID - Deck D</description>
+                <group>[EqualizerRack1_[Channel4]_Effect1]</group>
+                <key>parameter2</key>
+                <status>0xB6</status>
+                <midino>0x0E</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- EQ LOW                                                        -->
+            <!-- ============================================================ -->
+            <control>
+                <description>EQ LOW - Deck A</description>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter1</key>
+                <status>0xB6</status>
+                <midino>0x0F</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>EQ LOW - Deck B</description>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter1</key>
+                <status>0xB6</status>
+                <midino>0x10</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>EQ LOW - Deck C</description>
+                <group>[EqualizerRack1_[Channel3]_Effect1]</group>
+                <key>parameter1</key>
+                <status>0xB6</status>
+                <midino>0x11</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>EQ LOW - Deck D</description>
+                <group>[EqualizerRack1_[Channel4]_Effect1]</group>
+                <key>parameter1</key>
+                <status>0xB6</status>
+                <midino>0x12</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- Headphone master controls                                     -->
+            <!-- ============================================================ -->
+            <control>
+                <description>Headphone MIX knob (CUE / MASTER blend)</description>
+                <group>[Master]</group>
+                <key>headMix</key>
+                <status>0xB6</status>
+                <midino>0x01</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Headphone VOLUME knob</description>
+                <group>[Master]</group>
+                <key>headGain</key>
+                <status>0xB6</status>
+                <midino>0x02</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- Headphone CUE (PFL) per channel                               -->
+            <!-- ============================================================ -->
+            <control>
+                <description>Headphone CUE - Deck A</description>
+                <group>[Channel1]</group>
+                <key>pfl</key>
+                <status>0x96</status>
+                <midino>0x54</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Headphone CUE - Deck B</description>
+                <group>[Channel2]</group>
+                <key>pfl</key>
+                <status>0x96</status>
+                <midino>0x55</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Headphone CUE - Deck C</description>
+                <group>[Channel3]</group>
+                <key>pfl</key>
+                <status>0x96</status>
+                <midino>0x56</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Headphone CUE - Deck D</description>
+                <group>[Channel4]</group>
+                <key>pfl</key>
+                <status>0x96</status>
+                <midino>0x57</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+        </controls>
+        <outputs/>
+    </controller>
+</MixxxControllerPreset>
