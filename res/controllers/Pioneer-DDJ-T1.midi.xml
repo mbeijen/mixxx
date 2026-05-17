@@ -79,21 +79,11 @@
                 </options>
             </control>
             <control>
-                <description>SHIFT - Deck A</description>
-                <group>[Channel1]</group>
-                <key>PioneerDDJT1.shift</key>
-                <status>0x90</status>
-                <midino>0x1A</midino>
-                <options>
-                    <Script-Binding/>
-                </options>
-            </control>
-            <control>
                 <description>KEY LOCK - Deck A</description>
                 <group>[Channel1]</group>
                 <key>keylock</key>
                 <status>0x90</status>
-                <midino>0x56</midino>
+                <midino>0x1A</midino>
                 <options>
                     <Normal/>
                 </options>
@@ -123,21 +113,11 @@
                 </options>
             </control>
             <control>
-                <description>SHIFT - Deck B</description>
-                <group>[Channel2]</group>
-                <key>PioneerDDJT1.shift</key>
-                <status>0x91</status>
-                <midino>0x1A</midino>
-                <options>
-                    <Script-Binding/>
-                </options>
-            </control>
-            <control>
                 <description>KEY LOCK - Deck B</description>
                 <group>[Channel2]</group>
                 <key>keylock</key>
                 <status>0x91</status>
-                <midino>0x56</midino>
+                <midino>0x1A</midino>
                 <options>
                     <Normal/>
                 </options>
@@ -577,7 +557,891 @@
                 </options>
             </control>
 
+            <!-- ============================================================ -->
+            <!-- Hot cues (1-4) activate per deck                              -->
+            <!-- ============================================================ -->
+            <control>
+                <description>Hot cue 1 - Deck A</description>
+                <group>[Channel1]</group>
+                <key>hotcue_1_activate</key>
+                <status>0x90</status>
+                <midino>0x2E</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 2 - Deck A</description>
+                <group>[Channel1]</group>
+                <key>hotcue_2_activate</key>
+                <status>0x90</status>
+                <midino>0x2F</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 3 - Deck A</description>
+                <group>[Channel1]</group>
+                <key>hotcue_3_activate</key>
+                <status>0x90</status>
+                <midino>0x30</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 4 - Deck A</description>
+                <group>[Channel1]</group>
+                <key>hotcue_4_activate</key>
+                <status>0x90</status>
+                <midino>0x31</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 1 - Deck B</description>
+                <group>[Channel2]</group>
+                <key>hotcue_1_activate</key>
+                <status>0x91</status>
+                <midino>0x2E</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 2 - Deck B</description>
+                <group>[Channel2]</group>
+                <key>hotcue_2_activate</key>
+                <status>0x91</status>
+                <midino>0x2F</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 3 - Deck B</description>
+                <group>[Channel2]</group>
+                <key>hotcue_3_activate</key>
+                <status>0x91</status>
+                <midino>0x30</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 4 - Deck B</description>
+                <group>[Channel2]</group>
+                <key>hotcue_4_activate</key>
+                <status>0x91</status>
+                <midino>0x31</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 1 - Deck C</description>
+                <group>[Channel3]</group>
+                <key>hotcue_1_activate</key>
+                <status>0x92</status>
+                <midino>0x2E</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 2 - Deck C</description>
+                <group>[Channel3]</group>
+                <key>hotcue_2_activate</key>
+                <status>0x92</status>
+                <midino>0x2F</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 3 - Deck C</description>
+                <group>[Channel3]</group>
+                <key>hotcue_3_activate</key>
+                <status>0x92</status>
+                <midino>0x30</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 4 - Deck C</description>
+                <group>[Channel3]</group>
+                <key>hotcue_4_activate</key>
+                <status>0x92</status>
+                <midino>0x31</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 1 - Deck D</description>
+                <group>[Channel4]</group>
+                <key>hotcue_1_activate</key>
+                <status>0x93</status>
+                <midino>0x2E</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 2 - Deck D</description>
+                <group>[Channel4]</group>
+                <key>hotcue_2_activate</key>
+                <status>0x93</status>
+                <midino>0x2F</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 3 - Deck D</description>
+                <group>[Channel4]</group>
+                <key>hotcue_3_activate</key>
+                <status>0x93</status>
+                <midino>0x30</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Hot cue 4 - Deck D</description>
+                <group>[Channel4]</group>
+                <key>hotcue_4_activate</key>
+                <status>0x93</status>
+                <midino>0x31</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- Hot cues clear (SHIFT + hot cue) per deck                     -->
+            <!-- ============================================================ -->
+            <control>
+                <description>Clear hot cue 1 - Deck A</description>
+                <group>[Channel1]</group>
+                <key>hotcue_1_clear</key>
+                <status>0x90</status>
+                <midino>0x5F</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 2 - Deck A</description>
+                <group>[Channel1]</group>
+                <key>hotcue_2_clear</key>
+                <status>0x90</status>
+                <midino>0x60</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 3 - Deck A</description>
+                <group>[Channel1]</group>
+                <key>hotcue_3_clear</key>
+                <status>0x90</status>
+                <midino>0x61</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 4 - Deck A</description>
+                <group>[Channel1]</group>
+                <key>hotcue_4_clear</key>
+                <status>0x90</status>
+                <midino>0x62</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 1 - Deck B</description>
+                <group>[Channel2]</group>
+                <key>hotcue_1_clear</key>
+                <status>0x91</status>
+                <midino>0x5F</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 2 - Deck B</description>
+                <group>[Channel2]</group>
+                <key>hotcue_2_clear</key>
+                <status>0x91</status>
+                <midino>0x60</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 3 - Deck B</description>
+                <group>[Channel2]</group>
+                <key>hotcue_3_clear</key>
+                <status>0x91</status>
+                <midino>0x61</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 4 - Deck B</description>
+                <group>[Channel2]</group>
+                <key>hotcue_4_clear</key>
+                <status>0x91</status>
+                <midino>0x62</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 1 - Deck C</description>
+                <group>[Channel3]</group>
+                <key>hotcue_1_clear</key>
+                <status>0x92</status>
+                <midino>0x5F</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 2 - Deck C</description>
+                <group>[Channel3]</group>
+                <key>hotcue_2_clear</key>
+                <status>0x92</status>
+                <midino>0x60</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 3 - Deck C</description>
+                <group>[Channel3]</group>
+                <key>hotcue_3_clear</key>
+                <status>0x92</status>
+                <midino>0x61</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 4 - Deck C</description>
+                <group>[Channel3]</group>
+                <key>hotcue_4_clear</key>
+                <status>0x92</status>
+                <midino>0x62</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 1 - Deck D</description>
+                <group>[Channel4]</group>
+                <key>hotcue_1_clear</key>
+                <status>0x93</status>
+                <midino>0x5F</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 2 - Deck D</description>
+                <group>[Channel4]</group>
+                <key>hotcue_2_clear</key>
+                <status>0x93</status>
+                <midino>0x60</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 3 - Deck D</description>
+                <group>[Channel4]</group>
+                <key>hotcue_3_clear</key>
+                <status>0x93</status>
+                <midino>0x61</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Clear hot cue 4 - Deck D</description>
+                <group>[Channel4]</group>
+                <key>hotcue_4_clear</key>
+                <status>0x93</status>
+                <midino>0x62</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- Loop in / out per deck                                        -->
+            <!-- ============================================================ -->
+            <control>
+                <description>Loop in - Deck A</description>
+                <group>[Channel1]</group>
+                <key>loop_in</key>
+                <status>0x90</status>
+                <midino>0x10</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Loop out - Deck A</description>
+                <group>[Channel1]</group>
+                <key>loop_out</key>
+                <status>0x90</status>
+                <midino>0x11</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Loop in - Deck B</description>
+                <group>[Channel2]</group>
+                <key>loop_in</key>
+                <status>0x91</status>
+                <midino>0x10</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Loop out - Deck B</description>
+                <group>[Channel2]</group>
+                <key>loop_out</key>
+                <status>0x91</status>
+                <midino>0x11</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Loop in - Deck C</description>
+                <group>[Channel3]</group>
+                <key>loop_in</key>
+                <status>0x92</status>
+                <midino>0x10</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Loop out - Deck C</description>
+                <group>[Channel3]</group>
+                <key>loop_out</key>
+                <status>0x92</status>
+                <midino>0x11</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Loop in - Deck D</description>
+                <group>[Channel4]</group>
+                <key>loop_in</key>
+                <status>0x93</status>
+                <midino>0x10</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>Loop out - Deck D</description>
+                <group>[Channel4]</group>
+                <key>loop_out</key>
+                <status>0x93</status>
+                <midino>0x11</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- AUTO LOOP encoder (rotate doubles/halves beatloop_size)       -->
+            <!-- ============================================================ -->
+            <control>
+                <description>Auto loop encoder - Deck A</description>
+                <group>[Channel1]</group>
+                <key>PioneerDDJT1.autoLoop</key>
+                <status>0xB0</status>
+                <midino>0x13</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>
+                <description>Auto loop encoder - Deck B</description>
+                <group>[Channel2]</group>
+                <key>PioneerDDJT1.autoLoop</key>
+                <status>0xB1</status>
+                <midino>0x13</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>
+                <description>Auto loop encoder - Deck C</description>
+                <group>[Channel3]</group>
+                <key>PioneerDDJT1.autoLoop</key>
+                <status>0xB2</status>
+                <midino>0x13</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>
+                <description>Auto loop encoder - Deck D</description>
+                <group>[Channel4]</group>
+                <key>PioneerDDJT1.autoLoop</key>
+                <status>0xB3</status>
+                <midino>0x13</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- SYNC per deck                                                 -->
+            <!-- ============================================================ -->
+            <control>
+                <description>SYNC - Deck A</description>
+                <group>[Channel1]</group>
+                <key>sync_enabled</key>
+                <status>0x96</status>
+                <midino>0x58</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>SYNC - Deck B</description>
+                <group>[Channel2]</group>
+                <key>sync_enabled</key>
+                <status>0x96</status>
+                <midino>0x59</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>SYNC - Deck C</description>
+                <group>[Channel3]</group>
+                <key>sync_enabled</key>
+                <status>0x96</status>
+                <midino>0x5A</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>SYNC - Deck D</description>
+                <group>[Channel4]</group>
+                <key>sync_enabled</key>
+                <status>0x96</status>
+                <midino>0x5B</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
+            <!-- ============================================================ -->
+            <!-- SHIFT + CUE  -> jump to start of track and stop               -->
+            <!-- ============================================================ -->
+            <control>
+                <description>SHIFT + CUE - Deck A (start/stop)</description>
+                <group>[Channel1]</group>
+                <key>start_stop</key>
+                <status>0x90</status>
+                <midino>0x48</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>SHIFT + CUE - Deck B (start/stop)</description>
+                <group>[Channel2]</group>
+                <key>start_stop</key>
+                <status>0x91</status>
+                <midino>0x48</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>SHIFT + CUE - Deck C (start/stop)</description>
+                <group>[Channel3]</group>
+                <key>start_stop</key>
+                <status>0x92</status>
+                <midino>0x48</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+            <control>
+                <description>SHIFT + CUE - Deck D (start/stop)</description>
+                <group>[Channel4]</group>
+                <key>start_stop</key>
+                <status>0x93</status>
+                <midino>0x48</midino>
+                <options>
+                    <Normal/>
+                </options>
+            </control>
+
         </controls>
-        <outputs/>
+        <outputs>
+
+            <!-- KEY LOCK LEDs (test whether MIDI feedback works for status LEDs) -->
+            <output>
+                <group>[Channel1]</group>
+                <key>keylock</key>
+                <status>0x90</status>
+                <midino>0x1A</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>keylock</key>
+                <status>0x91</status>
+                <midino>0x1A</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel3]</group>
+                <key>keylock</key>
+                <status>0x92</status>
+                <midino>0x1A</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel4]</group>
+                <key>keylock</key>
+                <status>0x93</status>
+                <midino>0x1A</midino>
+                <minimum>0.5</minimum>
+            </output>
+
+            <!-- SYNC LEDs -->
+            <output>
+                <group>[Channel1]</group>
+                <key>sync_enabled</key>
+                <status>0x96</status>
+                <midino>0x58</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>sync_enabled</key>
+                <status>0x96</status>
+                <midino>0x59</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel3]</group>
+                <key>sync_enabled</key>
+                <status>0x96</status>
+                <midino>0x5A</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel4]</group>
+                <key>sync_enabled</key>
+                <status>0x96</status>
+                <midino>0x5B</midino>
+                <minimum>0.5</minimum>
+            </output>
+
+            <!-- PLAY LEDs -->
+            <output>
+                <group>[Channel1]</group>
+                <key>play_indicator</key>
+                <status>0x90</status>
+                <midino>0x0B</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>play_indicator</key>
+                <status>0x91</status>
+                <midino>0x0B</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel3]</group>
+                <key>play_indicator</key>
+                <status>0x92</status>
+                <midino>0x0B</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel4]</group>
+                <key>play_indicator</key>
+                <status>0x93</status>
+                <midino>0x0B</midino>
+                <minimum>0.5</minimum>
+            </output>
+
+            <!-- CUE LEDs -->
+            <output>
+                <group>[Channel1]</group>
+                <key>cue_indicator</key>
+                <status>0x90</status>
+                <midino>0x0C</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>cue_indicator</key>
+                <status>0x91</status>
+                <midino>0x0C</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel3]</group>
+                <key>cue_indicator</key>
+                <status>0x92</status>
+                <midino>0x0C</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel4]</group>
+                <key>cue_indicator</key>
+                <status>0x93</status>
+                <midino>0x0C</midino>
+                <minimum>0.5</minimum>
+            </output>
+
+            <!-- HOT CUE LEDs (1-4 per deck) -->
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_1_enabled</key>
+                <status>0x90</status>
+                <midino>0x2E</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_2_enabled</key>
+                <status>0x90</status>
+                <midino>0x2F</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_3_enabled</key>
+                <status>0x90</status>
+                <midino>0x30</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_4_enabled</key>
+                <status>0x90</status>
+                <midino>0x31</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>hotcue_1_enabled</key>
+                <status>0x91</status>
+                <midino>0x2E</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>hotcue_2_enabled</key>
+                <status>0x91</status>
+                <midino>0x2F</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>hotcue_3_enabled</key>
+                <status>0x91</status>
+                <midino>0x30</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>hotcue_4_enabled</key>
+                <status>0x91</status>
+                <midino>0x31</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel3]</group>
+                <key>hotcue_1_enabled</key>
+                <status>0x92</status>
+                <midino>0x2E</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel3]</group>
+                <key>hotcue_2_enabled</key>
+                <status>0x92</status>
+                <midino>0x2F</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel3]</group>
+                <key>hotcue_3_enabled</key>
+                <status>0x92</status>
+                <midino>0x30</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel3]</group>
+                <key>hotcue_4_enabled</key>
+                <status>0x92</status>
+                <midino>0x31</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel4]</group>
+                <key>hotcue_1_enabled</key>
+                <status>0x93</status>
+                <midino>0x2E</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel4]</group>
+                <key>hotcue_2_enabled</key>
+                <status>0x93</status>
+                <midino>0x2F</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel4]</group>
+                <key>hotcue_3_enabled</key>
+                <status>0x93</status>
+                <midino>0x30</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel4]</group>
+                <key>hotcue_4_enabled</key>
+                <status>0x93</status>
+                <midino>0x31</midino>
+                <minimum>0.5</minimum>
+            </output>
+
+            <!-- LOOP IN / LOOP OUT LEDs (both follow loop_enabled) -->
+            <output>
+                <group>[Channel1]</group>
+                <key>loop_enabled</key>
+                <status>0x90</status>
+                <midino>0x10</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>loop_enabled</key>
+                <status>0x90</status>
+                <midino>0x11</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>loop_enabled</key>
+                <status>0x91</status>
+                <midino>0x10</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>loop_enabled</key>
+                <status>0x91</status>
+                <midino>0x11</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel3]</group>
+                <key>loop_enabled</key>
+                <status>0x92</status>
+                <midino>0x10</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel3]</group>
+                <key>loop_enabled</key>
+                <status>0x92</status>
+                <midino>0x11</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel4]</group>
+                <key>loop_enabled</key>
+                <status>0x93</status>
+                <midino>0x10</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel4]</group>
+                <key>loop_enabled</key>
+                <status>0x93</status>
+                <midino>0x11</midino>
+                <minimum>0.5</minimum>
+            </output>
+
+            <!-- HEADPHONE CUE (PFL) LEDs -->
+            <output>
+                <group>[Channel1]</group>
+                <key>pfl</key>
+                <status>0x96</status>
+                <midino>0x54</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>pfl</key>
+                <status>0x96</status>
+                <midino>0x55</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel3]</group>
+                <key>pfl</key>
+                <status>0x96</status>
+                <midino>0x56</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel4]</group>
+                <key>pfl</key>
+                <status>0x96</status>
+                <midino>0x57</midino>
+                <minimum>0.5</minimum>
+            </output>
+
+            <!-- FILTER enable LEDs (filter knob push button, decks A/B only) -->
+            <output>
+                <group>[QuickEffectRack1_[Channel1]]</group>
+                <key>enabled</key>
+                <status>0x90</status>
+                <midino>0x45</midino>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[QuickEffectRack1_[Channel2]]</group>
+                <key>enabled</key>
+                <status>0x91</status>
+                <midino>0x45</midino>
+                <minimum>0.5</minimum>
+            </output>
+
+        </outputs>
     </controller>
 </MixxxControllerPreset>

@@ -1,13 +1,19 @@
 // Pioneer-DDJ-T1-scripts.js
 // Mixxx controller mapping for the Pioneer DDJ-T1.
 //
-// Scope (core): transport, mixer, EQ, filter, pitch faders, jog wheels
-// (scratch + pitch bend), headphone cue, browse, load.
+// Scope: transport, mixer, EQ, filter, pitch faders, jog wheels
+// (scratch + pitch bend), headphone cue, browse, load, hot cues,
+// loops, autoloop, sync.
 //
 // MIDI channel convention used by the DDJ-T1:
 //   ch0 (status 0x90/0xB0) = deck A
 //   ch1 (status 0x91/0xB1) = deck B
+//   ch2/ch3                = decks C/D when deck-switch is active
 //   ch6 (status 0x96/0xB6) = global mixer / library
+//
+// SHIFT is a hardware-internal modifier — it sends no MIDI on its own but
+// changes which note other buttons emit (e.g. CUE -> 0x0C, SHIFT+CUE -> 0x48).
+// Shift-variants are bound directly to their distinct notes in the XML.
 //
 // Jog wheel rotation encoding (relative, signed 7-bit):
 //   1..63   = forward ticks
@@ -25,12 +31,7 @@ PioneerDDJT1.scratchRpm = 33 + 1 / 3;
 PioneerDDJT1.jogBendScale = 1.0;
 PioneerDDJT1.jogSideScale = 0.4;
 
-// Shift state per deck (1 = deck A, 2 = deck B)
-PioneerDDJT1.shiftPressed = { 1: false, 2: false };
-
-PioneerDDJT1.init = function() {
-    // Nothing to initialize for the core mapping yet (no LED feedback).
-};
+PioneerDDJT1.init = function() {};
 
 PioneerDDJT1.shutdown = function() {
     // Make sure scratching is disabled when Mixxx exits.
@@ -50,11 +51,6 @@ PioneerDDJT1.signed7 = function(value) {
 //   ch0 -> deck 1 (A), ch1 -> deck 2 (B).
 PioneerDDJT1.deckFromChannel = function(channel) {
     return channel + 1;
-};
-
-PioneerDDJT1.shift = function(channel, control, value) {
-    var deck = PioneerDDJT1.deckFromChannel(channel);
-    PioneerDDJT1.shiftPressed[deck] = value > 0;
 };
 
 PioneerDDJT1.jogTouch = function(channel, control, value) {
@@ -85,4 +81,14 @@ PioneerDDJT1.jogTop = function(channel, control, value, status, group) {
 PioneerDDJT1.jogSide = function(channel, control, value, status, group) {
     var delta = PioneerDDJT1.signed7(value);
     engine.setValue(group, "jog", delta * PioneerDDJT1.jogSideScale);
+};
+
+// AUTO LOOP encoder: rotating doubles (value 1) or halves (value 127) the
+// current beatloop_size, clamped to Mixxx's accepted range.
+PioneerDDJT1.autoLoop = function(channel, control, value, status, group) {
+    var current = engine.getParameter(group, "beatloop_size");
+    var next = (value === 1) ? current * 2 : current / 2;
+    if (next >= 0.03125 && next <= 512) {
+        engine.setParameter(group, "beatloop_size", next);
+    }
 };
